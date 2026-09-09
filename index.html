@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Ishita Gaba | Finance & Equity Research</title>
+    <title>Ishita Gaba | Finance Analyst</title>
+
+    <meta name="description"
+        content="Ishita Gaba - Finance Analyst specializing in financial analysis, financial modelling, valuation and equity research.">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -19,28 +26,38 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #f8f9fb;
+            background: #f7f8fa;
             color: #172033;
             line-height: 1.6;
         }
 
-        /* NAVIGATION */
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
 
         nav {
-            width: 100%;
-            padding: 22px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: white;
-            border-bottom: 1px solid #e6e8ec;
-            position: sticky;
-            top: 0;
-            z-index: 100;
+
+            padding: 20px 8%;
+
+            background: rgba(255,255,255,0.96);
+
+            border-bottom: 1px solid #e5e7eb;
         }
 
         .logo {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 700;
             letter-spacing: -0.5px;
         }
@@ -52,9 +69,8 @@
         }
 
         .nav-links a {
-            text-decoration: none;
-            color: #4b5563;
-            font-size: 15px;
+            color: #5b6472;
+            font-size: 14px;
             transition: 0.3s;
         }
 
@@ -62,267 +78,487 @@
             color: #111827;
         }
 
-        /* HERO */
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
             min-height: 88vh;
+
             display: flex;
             align-items: center;
-            padding: 80px 8%;
-            background: white;
+
+            padding: 90px 8%;
+
+            background: #ffffff;
         }
 
-        .hero-content {
-            max-width: 850px;
+        .hero-container {
+            max-width: 1000px;
         }
 
-        .tag {
+        .eyebrow {
             display: inline-block;
-            padding: 8px 15px;
-            background: #eef2f7;
-            border-radius: 30px;
-            font-size: 13px;
-            color: #4b5563;
+
             margin-bottom: 25px;
+
+            padding: 8px 14px;
+
+            border: 1px solid #dfe3e8;
+            border-radius: 30px;
+
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+
+            color: #697386;
         }
 
         .hero h1 {
-            font-size: clamp(48px, 8vw, 88px);
+            max-width: 900px;
+
+            font-size: clamp(52px, 8vw, 92px);
+
             line-height: 0.98;
-            letter-spacing: -4px;
-            margin-bottom: 25px;
+
+            letter-spacing: -5px;
+
+            margin-bottom: 30px;
         }
 
         .hero h1 span {
-            color: #52606d;
+            color: #697386;
         }
 
-        .hero p {
+        .hero-description {
             max-width: 650px;
+
             font-size: 20px;
+
             color: #667085;
+
             margin-bottom: 35px;
         }
 
-        .buttons {
+        .hero-buttons {
             display: flex;
-            gap: 15px;
+            gap: 14px;
             flex-wrap: wrap;
         }
 
-        .btn {
+        .button {
             display: inline-block;
+
             padding: 13px 22px;
-            border-radius: 7px;
-            text-decoration: none;
-            font-weight: 600;
+
+            border-radius: 6px;
+
             font-size: 14px;
+
+            font-weight: 600;
+
             transition: 0.3s;
         }
 
-        .btn-primary {
+        .button-primary {
             background: #172033;
             color: white;
         }
 
-        .btn-primary:hover {
+        .button-primary:hover {
             transform: translateY(-2px);
         }
 
-        .btn-secondary {
-            border: 1px solid #d4d8df;
-            color: #172033;
+        .button-secondary {
             background: white;
+
+            color: #172033;
+
+            border: 1px solid #d8dce2;
         }
 
-        .btn-secondary:hover {
+        .button-secondary:hover {
             background: #f3f4f6;
         }
 
-        /* GENERAL SECTIONS */
+
+        /* =========================
+           GENERAL
+        ========================= */
 
         section {
             padding: 100px 8%;
         }
 
         .section-label {
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #7b8494;
             margin-bottom: 12px;
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            color: #8992a1;
         }
 
         .section-title {
-            font-size: 42px;
+            font-size: 44px;
+
+            line-height: 1.1;
+
             letter-spacing: -1.5px;
-            margin-bottom: 20px;
+
+            margin-bottom: 25px;
         }
 
-        /* ABOUT */
+
+        /* =========================
+           ABOUT
+        ========================= */
 
         .about {
-            background: #f8f9fb;
+            background: #f7f8fa;
         }
 
         .about-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 70px;
-            align-items: start;
+
+            grid-template-columns: 1.1fr 0.9fr;
+
+            gap: 80px;
         }
 
         .about-text {
+            max-width: 650px;
+
             font-size: 18px;
+
             color: #667085;
         }
 
         .about-text p {
-            margin-bottom: 18px;
+            margin-bottom: 20px;
         }
 
-        .highlights {
+        .about-cards {
             display: grid;
-            gap: 18px;
+            gap: 15px;
         }
 
-        .highlight {
-            background: white;
+        .about-card {
             padding: 25px;
-            border: 1px solid #e5e7eb;
+
+            background: white;
+
+            border: 1px solid #e3e6eb;
+
             border-radius: 10px;
         }
 
-        .highlight h3 {
+        .about-card h3 {
             font-size: 17px;
-            margin-bottom: 5px;
+
+            margin-bottom: 6px;
         }
 
-        .highlight p {
+        .about-card p {
             color: #667085;
+
             font-size: 14px;
         }
 
-        /* PROJECTS */
+
+        /* =========================
+           EXPERIENCE
+        ========================= */
+
+        .experience {
+            background: white;
+        }
+
+        .experience-list {
+            margin-top: 45px;
+        }
+
+        .experience-item {
+            display: grid;
+
+            grid-template-columns: 180px 1fr;
+
+            gap: 45px;
+
+            padding: 30px 0;
+
+            border-top: 1px solid #e3e6eb;
+        }
+
+        .experience-date {
+            color: #8992a1;
+
+            font-size: 13px;
+        }
+
+        .experience-content h3 {
+            font-size: 21px;
+
+            margin-bottom: 4px;
+        }
+
+        .experience-company {
+            color: #697386;
+
+            font-size: 14px;
+
+            margin-bottom: 12px;
+        }
+
+        .experience-content p {
+            max-width: 700px;
+
+            color: #667085;
+
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================= */
 
         .projects {
-            background: white;
+            background: #f7f8fa;
         }
 
         .project-grid {
             display: grid;
+
             grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
+
+            gap: 22px;
+
             margin-top: 45px;
         }
 
         .project-card {
-            padding: 35px;
-            border: 1px solid #e2e5e9;
-            border-radius: 12px;
+            padding: 32px;
+
+            background: white;
+
+            border: 1px solid #e1e5ea;
+
+            border-radius: 10px;
+
             transition: 0.3s;
-            background: #fff;
         }
 
         .project-card:hover {
             transform: translateY(-5px);
+
             box-shadow: 0 15px 35px rgba(0,0,0,0.06);
         }
 
         .project-number {
             color: #8a94a6;
-            font-size: 13px;
-            margin-bottom: 30px;
+
+            font-size: 12px;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 25px;
         }
 
         .project-card h3 {
-            font-size: 25px;
+            font-size: 24px;
+
             margin-bottom: 12px;
         }
 
         .project-card p {
             color: #667085;
-            margin-bottom: 20px;
+
+            font-size: 15px;
+
+            margin-bottom: 22px;
         }
 
         .project-link {
-            text-decoration: none;
             color: #172033;
-            font-weight: 600;
+
             font-size: 14px;
+
+            font-weight: 600;
         }
 
-        /* SKILLS */
+
+        /* =========================
+           SKILLS
+        ========================= */
 
         .skills {
-            background: #f8f9fb;
+            background: white;
+        }
+
+        .skill-groups {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+
+            margin-top: 45px;
+        }
+
+        .skill-group {
+            padding: 28px;
+
+            border: 1px solid #e1e5ea;
+
+            border-radius: 10px;
+        }
+
+        .skill-group h3 {
+            margin-bottom: 18px;
+
+            font-size: 17px;
         }
 
         .skill-list {
             display: flex;
+
             flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 35px;
+
+            gap: 8px;
         }
 
         .skill {
+            padding: 8px 12px;
+
+            background: #f3f4f6;
+
+            border-radius: 5px;
+
+            font-size: 12px;
+
+            color: #596273;
+        }
+
+
+        /* =========================
+           EDUCATION
+        ========================= */
+
+        .education {
+            background: #f7f8fa;
+        }
+
+        .education-card {
+            margin-top: 40px;
+
+            padding: 30px;
+
             background: white;
-            border: 1px solid #dfe3e8;
-            padding: 12px 18px;
-            border-radius: 6px;
+
+            border: 1px solid #e1e5ea;
+
+            border-radius: 10px;
+
+            max-width: 850px;
+        }
+
+        .education-card h3 {
+            font-size: 20px;
+
+            margin-bottom: 5px;
+        }
+
+        .education-card .institution {
+            color: #697386;
+
+            margin-bottom: 15px;
+        }
+
+        .education-card p {
+            color: #667085;
+
             font-size: 14px;
         }
 
-        /* CONTACT */
+
+        /* =========================
+           CONTACT
+        ========================= */
 
         .contact {
             background: #172033;
+
             color: white;
+
             text-align: center;
         }
 
         .contact .section-label {
-            color: #aeb7c5;
+            color: #9da7b6;
         }
 
         .contact .section-title {
-            max-width: 700px;
+            max-width: 650px;
+
             margin: 0 auto 20px;
         }
 
-        .contact p {
-            color: #b9c1ce;
+        .contact-text {
             max-width: 550px;
+
             margin: 0 auto 30px;
+
+            color: #b7bfcb;
         }
 
         .contact-links {
             display: flex;
+
             justify-content: center;
+
             gap: 25px;
+
             flex-wrap: wrap;
         }
 
         .contact-links a {
             color: white;
-            text-decoration: none;
-            border-bottom: 1px solid #697386;
-            padding-bottom: 3px;
+
+            padding-bottom: 4px;
+
+            border-bottom: 1px solid #677184;
+
+            font-size: 14px;
         }
 
-        /* FOOTER */
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
-            text-align: center;
             padding: 25px;
+
             background: #111827;
-            color: #8f98a8;
-            font-size: 13px;
+
+            color: #8992a1;
+
+            text-align: center;
+
+            font-size: 12px;
         }
 
-        /* MOBILE */
 
-        @media (max-width: 700px) {
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 750px) {
 
             nav {
                 padding: 18px 5%;
@@ -342,80 +578,134 @@
 
             .hero h1 {
                 font-size: 55px;
-                letter-spacing: -2px;
-            }
 
-            .hero p {
-                font-size: 17px;
+                letter-spacing: -3px;
             }
 
             section {
                 padding: 70px 6%;
             }
 
-            .about-grid,
+            .about-grid {
+                grid-template-columns: 1fr;
+
+                gap: 40px;
+            }
+
             .project-grid {
                 grid-template-columns: 1fr;
-                gap: 30px;
+            }
+
+            .skill-groups {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-item {
+                grid-template-columns: 1fr;
+
+                gap: 8px;
             }
 
             .section-title {
-                font-size: 34px;
+                font-size: 35px;
             }
+
         }
+
     </style>
+
 </head>
 
+
 <body>
+
 
     <!-- NAVIGATION -->
 
     <nav>
-        <div class="logo">Ishita Gaba</div>
+
+        <div class="logo">
+            Ishita Gaba
+        </div>
 
         <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
         </ul>
+
     </nav>
+
 
 
     <!-- HERO -->
 
     <header class="hero">
 
-        <div class="hero-content">
+        <div class="hero-container">
 
-            <div class="tag">
-                Finance • Equity Research • Financial Analysis
+            <div class="eyebrow">
+                Finance Analyst
             </div>
 
             <h1>
-                Understanding<br>
-                <span>business through numbers.</span>
+
+                Finance,
+
+                <br>
+
+                <span>through numbers.</span>
+
             </h1>
 
-            <p>
-                I'm Ishita Gaba, an aspiring finance professional
-                interested in equity research, valuation and
-                financial analysis.
+            <p class="hero-description">
+
+                I’m Ishita Gaba — a finance professional focused on
+                financial analysis, financial modelling, valuation
+                and equity research.
+
             </p>
 
-            <div class="buttons">
-                <a href="#projects" class="btn btn-primary">
-                    View My Work
+            <div class="hero-buttons">
+
+                <a href="#projects"
+                   class="button button-primary">
+
+                    Explore My Work
+
                 </a>
 
-                <a href="#contact" class="btn btn-secondary">
+                <a href="#contact"
+                   class="button button-secondary">
+
                     Get In Touch
+
                 </a>
+
             </div>
 
         </div>
 
     </header>
+
 
 
     <!-- ABOUT -->
@@ -426,24 +716,29 @@
 
             <div>
 
-                <div class="section-label">01 — About</div>
+                <div class="section-label">
+                    01 — About
+                </div>
 
                 <h2 class="section-title">
-                    Finance with a research mindset.
+                    Analytical thinking. Financial insight.
                 </h2>
 
                 <div class="about-text">
 
                     <p>
-                        I am interested in understanding companies,
-                        industries and markets through financial
-                        analysis and research.
+                        I am a Finance Analyst with a foundation in
+                        financial analysis, financial modelling,
+                        corporate valuation, accounting and data
+                        analytics.
                     </p>
 
                     <p>
-                        My areas of interest include equity research,
-                        company analysis, valuation and financial
-                        modelling.
+                        My interests lie in understanding businesses
+                        through financial statements, forecasting,
+                        valuation and market research, with a focus
+                        on turning financial data into meaningful
+                        insights.
                     </p>
 
                 </div>
@@ -451,30 +746,47 @@
             </div>
 
 
-            <div class="highlights">
+            <div class="about-cards">
 
-                <div class="highlight">
-                    <h3>Equity Research</h3>
+                <div class="about-card">
+
+                    <h3>
+                        Financial Analysis
+                    </h3>
+
                     <p>
-                        Company analysis, industry research and
-                        investment thesis development.
+                        Financial statements, ratio analysis,
+                        trend analysis, budgeting and forecasting.
                     </p>
+
                 </div>
 
-                <div class="highlight">
-                    <h3>Financial Analysis</h3>
+
+                <div class="about-card">
+
+                    <h3>
+                        Valuation
+                    </h3>
+
                     <p>
-                        Understanding financial statements,
-                        business performance and key metrics.
+                        DCF valuation, comparable company analysis
+                        and intrinsic value assessment.
                     </p>
+
                 </div>
 
-                <div class="highlight">
-                    <h3>Valuation</h3>
+
+                <div class="about-card">
+
+                    <h3>
+                        Data Analytics
+                    </h3>
+
                     <p>
-                        Applying valuation frameworks to evaluate
-                        businesses and investment opportunities.
+                        Advanced Excel, Power BI and SQL for
+                        financial and business analysis.
                     </p>
+
                 </div>
 
             </div>
@@ -482,35 +794,177 @@
         </div>
 
     </section>
+
+
+
+    <!-- EXPERIENCE -->
+
+    <section class="experience" id="experience">
+
+        <div class="section-label">
+            02 — Experience
+        </div>
+
+        <h2 class="section-title">
+            Professional Experience
+        </h2>
+
+
+        <div class="experience-list">
+
+
+            <div class="experience-item">
+
+                <div class="experience-date">
+                    03/2024 — 06/2024
+                </div>
+
+                <div class="experience-content">
+
+                    <h3>
+                        Sales Executive Intern
+                    </h3>
+
+                    <div class="experience-company">
+                        HDFC Asset Management Company
+                    </div>
+
+                    <p>
+                        Worked on investment solutions, participated
+                        in New Fund Offering activities, conducted
+                        field visits and contributed toward a target
+                        achievement of ₹2 crore+.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="experience-item">
+
+                <div class="experience-date">
+                    11/2023 — 01/2024
+                </div>
+
+                <div class="experience-content">
+
+                    <h3>
+                        Business Development Intern
+                    </h3>
+
+                    <div class="experience-company">
+                        DayZero
+                    </div>
+
+                    <p>
+                        Contributed to user adoption of video resumes
+                        and worked toward achieving consultant
+                        acquisition targets.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="experience-item">
+
+                <div class="experience-date">
+                    02/2024
+                </div>
+
+                <div class="experience-content">
+
+                    <h3>
+                        Intern
+                    </h3>
+
+                    <div class="experience-company">
+                        Tax Point
+                    </div>
+
+                    <p>
+                        Developed practical knowledge of indirect
+                        taxation, compliance and application of
+                        tax concepts in real-world scenarios.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
 
 
     <!-- PROJECTS -->
 
     <section class="projects" id="projects">
 
-        <div class="section-label">02 — Selected Work</div>
+        <div class="section-label">
+            03 — Selected Work
+        </div>
 
         <h2 class="section-title">
-            Projects
+            Financial Projects
         </h2>
+
 
         <div class="project-grid">
 
+
             <div class="project-card">
 
-                <div class="project-number">PROJECT 01</div>
+                <div class="project-number">
+                    PROJECT 01
+                </div>
 
-                <h3>Mondelez Equity Research</h3>
+                <h3>
+                    Mondelez International
+                </h3>
 
                 <p>
-                    A comprehensive equity research project
-                    covering company overview, industry analysis,
-                    financial performance, valuation and investment
-                    thesis.
+                    Financial modelling and valuation project
+                    involving revenue forecasting, DCF analysis
+                    and relative valuation to estimate intrinsic
+                    value.
                 </p>
 
-                <a href="#" class="project-link">
+                <a href="#contact"
+                   class="project-link">
+
+                    View Research →
+                    
+                </a>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    PROJECT 02
+                </div>
+
+                <h3>
+                    PepsiCo
+                </h3>
+
+                <p>
+                    Financial modelling project focused on
+                    revenue forecasting and DCF analysis to
+                    determine the company's intrinsic value.
+                </p>
+
+                <a href="#contact"
+                   class="project-link">
+
                     View Project →
+
                 </a>
 
             </div>
@@ -518,18 +972,25 @@
 
             <div class="project-card">
 
-                <div class="project-number">PROJECT 02</div>
+                <div class="project-number">
+                    PROJECT 03
+                </div>
 
-                <h3>Financial Analysis</h3>
+                <h3>
+                    HDFC Mutual Fund
+                </h3>
 
                 <p>
-                    Financial statement analysis focused on
-                    understanding revenue growth, profitability,
-                    margins and business performance.
+                    Research into investment strategies,
+                    fund performance, portfolio composition,
+                    risk factors and investor preferences.
                 </p>
 
-                <a href="#" class="project-link">
-                    View Project →
+                <a href="#contact"
+                   class="project-link">
+
+                    View Analysis →
+
                 </a>
 
             </div>
@@ -537,94 +998,253 @@
 
             <div class="project-card">
 
-                <div class="project-number">PROJECT 03</div>
+                <div class="project-number">
+                    PROJECT 04
+                </div>
 
-                <h3>Company Valuation</h3>
+                <h3>
+                    More Research
+                </h3>
 
                 <p>
-                    Valuation analysis using financial metrics
-                    and fundamental approaches to assess a
-                    company's value.
+                    Additional financial analysis, equity
+                    research and valuation projects will be
+                    added here.
                 </p>
 
-                <a href="#" class="project-link">
-                    View Project →
+                <a href="#contact"
+                   class="project-link">
+
+                    Coming Soon →
+
                 </a>
 
             </div>
 
-
-            <div class="project-card">
-
-                <div class="project-number">PROJECT 04</div>
-
-                <h3>Coming Soon</h3>
-
-                <p>
-                    More financial research, analysis and
-                    investment projects will be added here.
-                </p>
-
-                <a href="#contact" class="project-link">
-                    Stay Connected →
-                </a>
-
-            </div>
 
         </div>
 
     </section>
+
 
 
     <!-- SKILLS -->
 
     <section class="skills" id="skills">
 
-        <div class="section-label">03 — Capabilities</div>
+        <div class="section-label">
+            04 — Capabilities
+        </div>
 
         <h2 class="section-title">
-            Skills
+            Skills & Expertise
         </h2>
 
-        <div class="skill-list">
 
-            <div class="skill">Equity Research</div>
-            <div class="skill">Financial Analysis</div>
-            <div class="skill">Financial Modelling</div>
-            <div class="skill">Company Valuation</div>
-            <div class="skill">Financial Statements</div>
-            <div class="skill">Microsoft Excel</div>
-            <div class="skill">PowerPoint</div>
-            <div class="skill">Industry Research</div>
+        <div class="skill-groups">
+
+
+            <div class="skill-group">
+
+                <h3>
+                    Financial
+                </h3>
+
+                <div class="skill-list">
+
+                    <span class="skill">
+                        Financial Statement Analysis
+                    </span>
+
+                    <span class="skill">
+                        Financial Modelling
+                    </span>
+
+                    <span class="skill">
+                        DCF Valuation
+                    </span>
+
+                    <span class="skill">
+                        Comparable Company Analysis
+                    </span>
+
+                    <span class="skill">
+                        Forecasting
+                    </span>
+
+                    <span class="skill">
+                        Equity Research
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-group">
+
+                <h3>
+                    Technical
+                </h3>
+
+                <div class="skill-list">
+
+                    <span class="skill">
+                        Advanced Excel
+                    </span>
+
+                    <span class="skill">
+                        Power BI
+                    </span>
+
+                    <span class="skill">
+                        SQL
+                    </span>
+
+                    <span class="skill">
+                        PowerPoint
+                    </span>
+
+                    <span class="skill">
+                        MS Word
+                    </span>
+
+                    <span class="skill">
+                        Python — Basic
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-group">
+
+                <h3>
+                    Strengths
+                </h3>
+
+                <div class="skill-list">
+
+                    <span class="skill">
+                        Analytical Thinking
+                    </span>
+
+                    <span class="skill">
+                        Problem Solving
+                    </span>
+
+                    <span class="skill">
+                        Communication
+                    </span>
+
+                    <span class="skill">
+                        Stakeholder Management
+                    </span>
+
+                    <span class="skill">
+                        Team Collaboration
+                    </span>
+
+                    <span class="skill">
+                        Attention to Detail
+                    </span>
+
+                </div>
+
+            </div>
+
 
         </div>
 
     </section>
 
 
+
+    <!-- EDUCATION -->
+
+    <section class="education">
+
+        <div class="section-label">
+            05 — Education
+        </div>
+
+        <h2 class="section-title">
+            Academic Background
+        </h2>
+
+
+        <div class="education-card">
+
+            <h3>
+                Post Graduate Program in Financial Analysis
+            </h3>
+
+            <div class="institution">
+                Imarticus Learning · 2026
+            </div>
+
+            <p>
+                Accounting Essentials · Accounting Standards ·
+                Financial Statement Analysis · Financial Modelling ·
+                Valuation · Forecasting · Business Decision Making
+            </p>
+
+        </div>
+
+
+        <div class="education-card">
+
+            <h3>
+                Bachelor of Commerce (Honors)
+            </h3>
+
+            <div class="institution">
+                Guru Gobind Singh Indraprastha University · 2022–2025
+            </div>
+
+            <p>
+                Delhi
+            </p>
+
+        </div>
+
+    </section>
+
+
+
     <!-- CONTACT -->
 
     <section class="contact" id="contact">
 
-        <div class="section-label">04 — Contact</div>
+        <div class="section-label">
+            06 — Contact
+        </div>
 
         <h2 class="section-title">
-            Let's connect.
+            Let’s connect.
         </h2>
 
-        <p>
-            Interested in finance, research and opportunities
-            to learn and contribute.
+        <p class="contact-text">
+
+            Interested in finance, equity research,
+            financial analysis and opportunities to
+            learn and contribute.
+
         </p>
+
 
         <div class="contact-links">
 
-            <a href="mailto:your-email@example.com">
+            <a href="mailto:i.iishitagaba@gmail.com">
                 Email
             </a>
 
-            <a href="#" target="_blank">
+            <a href="https://www.linkedin.com/in/ishita-gaba/"
+               target="_blank">
+
                 LinkedIn
+
             </a>
 
             <a href="#">
@@ -636,11 +1256,16 @@
     </section>
 
 
+
     <!-- FOOTER -->
 
     <footer>
-        © 2026 Ishita Gaba. Built with GitHub Pages.
+
+        © 2026 Ishita Gaba · Finance Analyst
+
     </footer>
 
+
 </body>
+
 </html>
