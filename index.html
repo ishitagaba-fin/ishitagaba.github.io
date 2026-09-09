@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ishita Gaba | Finance & Equity Research</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f8f9fb;
+            color: #172033;
+            line-height: 1.6;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            width: 100%;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            border-bottom: 1px solid #e6e8ec;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4b5563;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #111827;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            padding: 80px 8%;
+            background: white;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 8px 15px;
+            background: #eef2f7;
+            border-radius: 30px;
+            font-size: 13px;
+            color: #4b5563;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 8vw, 88px);
+            line-height: 0.98;
+            letter-spacing: -4px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #52606d;
+        }
+
+        .hero p {
+            max-width: 650px;
+            font-size: 20px;
+            color: #667085;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 22px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #172033;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            border: 1px solid #d4d8df;
+            color: #172033;
+            background: white;
+        }
+
+        .btn-secondary:hover {
+            background: #f3f4f6;
+        }
+
+        /* GENERAL SECTIONS */
+
+        section {
+            padding: 100px 8%;
+        }
+
+        .section-label {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #7b8494;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 42px;
+            letter-spacing: -1.5px;
+            margin-bottom: 20px;
+        }
+
+        /* ABOUT */
+
+        .about {
+            background: #f8f9fb;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: start;
+        }
+
+        .about-text {
+            font-size: 18px;
+            color: #667085;
+        }
+
+        .about-text p {
+            margin-bottom: 18px;
+        }
+
+        .highlights {
+            display: grid;
+            gap: 18px;
+        }
+
+        .highlight {
+            background: white;
+            padding: 25px;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+        }
+
+        .highlight h3 {
+            font-size: 17px;
+            margin-bottom: 5px;
+        }
+
+        .highlight p {
+            color: #667085;
+            font-size: 14px;
+        }
+
+        /* PROJECTS */
+
+        .projects {
+            background: white;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 45px;
+        }
+
+        .project-card {
+            padding: 35px;
+            border: 1px solid #e2e5e9;
+            border-radius: 12px;
+            transition: 0.3s;
+            background: #fff;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+        }
+
+        .project-number {
+            color: #8a94a6;
+            font-size: 13px;
+            margin-bottom: 30px;
+        }
+
+        .project-card h3 {
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            color: #667085;
+            margin-bottom: 20px;
+        }
+
+        .project-link {
+            text-decoration: none;
+            color: #172033;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        /* SKILLS */
+
+        .skills {
+            background: #f8f9fb;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 35px;
+        }
+
+        .skill {
+            background: white;
+            border: 1px solid #dfe3e8;
+            padding: 12px 18px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            background: #172033;
+            color: white;
+            text-align: center;
+        }
+
+        .contact .section-label {
+            color: #aeb7c5;
+        }
+
+        .contact .section-title {
+            max-width: 700px;
+            margin: 0 auto 20px;
+        }
+
+        .contact p {
+            color: #b9c1ce;
+            max-width: 550px;
+            margin: 0 auto 30px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid #697386;
+            padding-bottom: 3px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #111827;
+            color: #8f98a8;
+            font-size: 13px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 18px 5%;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 12px;
+            }
+
+            .hero {
+                padding: 70px 6%;
+            }
+
+            .hero h1 {
+                font-size: 55px;
+                letter-spacing: -2px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            section {
+                padding: 70px 6%;
+            }
+
+            .about-grid,
+            .project-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .section-title {
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+        <div class="logo">Ishita Gaba</div>
+
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HERO -->
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <div class="tag">
+                Finance • Equity Research • Financial Analysis
+            </div>
+
+            <h1>
+                Understanding<br>
+                <span>business through numbers.</span>
+            </h1>
+
+            <p>
+                I'm Ishita Gaba, an aspiring finance professional
+                interested in equity research, valuation and
+                financial analysis.
+            </p>
+
+            <div class="buttons">
+                <a href="#projects" class="btn btn-primary">
+                    View My Work
+                </a>
+
+                <a href="#contact" class="btn btn-secondary">
+                    Get In Touch
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ABOUT -->
+
+    <section class="about" id="about">
+
+        <div class="about-grid">
+
+            <div>
+
+                <div class="section-label">01 — About</div>
+
+                <h2 class="section-title">
+                    Finance with a research mindset.
+                </h2>
+
+                <div class="about-text">
+
+                    <p>
+                        I am interested in understanding companies,
+                        industries and markets through financial
+                        analysis and research.
+                    </p>
+
+                    <p>
+                        My areas of interest include equity research,
+                        company analysis, valuation and financial
+                        modelling.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="highlights">
+
+                <div class="highlight">
+                    <h3>Equity Research</h3>
+                    <p>
+                        Company analysis, industry research and
+                        investment thesis development.
+                    </p>
+                </div>
+
+                <div class="highlight">
+                    <h3>Financial Analysis</h3>
+                    <p>
+                        Understanding financial statements,
+                        business performance and key metrics.
+                    </p>
+                </div>
+
+                <div class="highlight">
+                    <h3>Valuation</h3>
+                    <p>
+                        Applying valuation frameworks to evaluate
+                        businesses and investment opportunities.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+
+    <section class="projects" id="projects">
+
+        <div class="section-label">02 — Selected Work</div>
+
+        <h2 class="section-title">
+            Projects
+        </h2>
+
+        <div class="project-grid">
+
+            <div class="project-card">
+
+                <div class="project-number">PROJECT 01</div>
+
+                <h3>Mondelez Equity Research</h3>
+
+                <p>
+                    A comprehensive equity research project
+                    covering company overview, industry analysis,
+                    financial performance, valuation and investment
+                    thesis.
+                </p>
+
+                <a href="#" class="project-link">
+                    View Project →
+                </a>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <div class="project-number">PROJECT 02</div>
+
+                <h3>Financial Analysis</h3>
+
+                <p>
+                    Financial statement analysis focused on
+                    understanding revenue growth, profitability,
+                    margins and business performance.
+                </p>
+
+                <a href="#" class="project-link">
+                    View Project →
+                </a>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <div class="project-number">PROJECT 03</div>
+
+                <h3>Company Valuation</h3>
+
+                <p>
+                    Valuation analysis using financial metrics
+                    and fundamental approaches to assess a
+                    company's value.
+                </p>
+
+                <a href="#" class="project-link">
+                    View Project →
+                </a>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <div class="project-number">PROJECT 04</div>
+
+                <h3>Coming Soon</h3>
+
+                <p>
+                    More financial research, analysis and
+                    investment projects will be added here.
+                </p>
+
+                <a href="#contact" class="project-link">
+                    Stay Connected →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+
+    <section class="skills" id="skills">
+
+        <div class="section-label">03 — Capabilities</div>
+
+        <h2 class="section-title">
+            Skills
+        </h2>
+
+        <div class="skill-list">
+
+            <div class="skill">Equity Research</div>
+            <div class="skill">Financial Analysis</div>
+            <div class="skill">Financial Modelling</div>
+            <div class="skill">Company Valuation</div>
+            <div class="skill">Financial Statements</div>
+            <div class="skill">Microsoft Excel</div>
+            <div class="skill">PowerPoint</div>
+            <div class="skill">Industry Research</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+
+        <div class="section-label">04 — Contact</div>
+
+        <h2 class="section-title">
+            Let's connect.
+        </h2>
+
+        <p>
+            Interested in finance, research and opportunities
+            to learn and contribute.
+        </p>
+
+        <div class="contact-links">
+
+            <a href="mailto:your-email@example.com">
+                Email
+            </a>
+
+            <a href="#" target="_blank">
+                LinkedIn
+            </a>
+
+            <a href="#">
+                Resume
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        © 2026 Ishita Gaba. Built with GitHub Pages.
+    </footer>
+
+</body>
+</html>
